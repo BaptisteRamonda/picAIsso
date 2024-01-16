@@ -1,0 +1,108 @@
+version: '2.0'
+config:
+  store_entities_as_slots: true
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- remerciements:
+    use_entities: true
+- bot_challenge:
+    use_entities: true
+- salutations:
+    use_entities: true
+- adieux:
+    use_entities: true
+- accessibilite:
+    use_entities: true
+- affirmation:
+    use_entities: true
+- negation:
+    use_entities: true
+- select_type:
+    use_entities: true
+- select_theme:
+    use_entities: true
+- select_style:
+    use_entities: true
+- select_details:
+    use_entities: true
+entities:
+- type_art
+- theme
+- style
+- details
+slots:
+  type_art:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+  theme:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+  style:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+  details:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+responses:
+  utter_hello:
+  - text: Salut, je suis PICAISSO ton assistant virtuel de création d'art. Je suis là pour t'aider à créer les plus belles œuvres, à toi de jouer !
+  - text: Bonjour, c'est PICAISSO, ton partenaire virtuel dédié à l'art. Mon but est de t'assister dans la création de magnifiques œuvres. À toi de commencer !
+  - text: Salutations, je réponds au doux nom de PICAISSO, ton guide virtuel dans le monde artistique. Ma mission ? T'accompagner pour donner vie à des créations exceptionnelles. À toi de prendre les commandes !
+  - text: Hey, c'est PICAISSO, ton compagnon virtuel pour l'art. Ensemble, créons des chefs-d'œuvre incroyables. C'est à toi de jouer maintenant !
+  - text: Coucou, PICAISSO à l'appareil, ton assistant virtuel dédié à l'art. Mon objectif ? T'inspirer pour que tes créations soient extraordinaires. À toi de faire preuve de créativité !
+  - text: Bonjour, PICAISSO ici, ton partenaire numérique pour libérer ta créativité artistique. Je suis là pour t'accompagner dans la réalisation de tes plus belles œuvres. C'est ton moment de briller !
+  utter_congrats:
+  - text: Quelle belle œuvre tu nous a réalisé, tu peux être fier de toi !
+  - text: Wow, quelle œuvre exceptionnelle tu as créée ! Sois fier de ton talent !
+  - text: Tu as vraiment accompli quelque chose d'extraordinaire avec cette œuvre. Sois fier de ton accomplissement !
+  - text: C'est incroyable, l'œuvre que tu as réalisée est magnifique ! Tu peux légitimement ressentir de la fierté !
+  - text: Je suis impressionné par la beauté de ton œuvre. Tu as toutes les raisons d'être fier de toi !
+  - text: Quelle création remarquable ! Tu as toutes les raisons d'être fier de ton talent artistique !
+  utter_bot_challenge:
+  - text: Je suis un assistant virtuel appelé PICAISSO, même si je ne suis pas un humain j'ai un grand sens artistique !
+  - text: Je réponds au nom de PICAISSO, un assistant virtuel. Bien que dépourvu d'humanité, mon sens artistique est tout aussi développé !
+  - text: C'est PICAISSO, ton assistant virtuel, qui te parle. Même si je ne suis pas humain, je suis doté d'un grand sens artistique !
+  - text: Je suis PICAISSO, ton assistant virtuel avec un flair artistique bien aiguisé, malgré mon absence d'humanité !
+  - text: C'est PICAISSO, ton assistant virtuel. Bien que je ne sois pas humain, mon sens artistique est bel et bien présent !
+  - text: Je suis PICAISSO, ton assistant virtuel. Même si je n'ai pas d'humanité, mon sens artistique est bien prononcé !
+  utter_bye:
+  - text: A bientôt pour de nouvelles créations !
+  - text: À très bientôt pour de nouvelles explorations artistiques !
+  - text: Au plaisir de te retrouver bientôt pour d'autres moments de création !
+  - text: On se revoit bientôt pour de nouvelles œuvres pleines de créativité !
+  - text: À la prochaine pour de passionnantes aventures artistiques !
+  - text: Reste inspiré et à très bientôt pour de nouvelles créations extraordinaires !
+  utter_accessibility:
+  - text: Souhaites-tu activer l'option Text to Speech ?
+  utter_tts_desactive:
+  - text: D'accord je désactive le Text to Speech !
+  utter_tts_active:
+  - text: D'accord, j'active le Text to Speech !
+  utter_response_type:
+  - text: Oh {type_art}? Super idée! Quel thème souhaitez-vous représenter ?
+  - text: Vraiment {type_art}? Bon ben j'ai pas trop le choix... Quel thème pour votre {type_art}?
+  utter_response_theme:
+  - text: Très bien, vous avez choisi le thème {theme}, avez-vous un style en tête ?
+  - text: Parfait, vous avez opté pour le thème {theme}. Avez-vous une préférence de style en tête ?
+  - text: D'accord, vous avez décidé sur le thème {theme}. Y a-t-il un style particulier que vous souhaitez adopter ?
+  - text: Excellent choix avec le thème {theme} ! Avez-vous une idée de style spécifique en tête ?
+  - text: Très bien, le thème retenu est {theme}. Aimeriez-vous spécifier un style pour votre création ?
+  - text: C'est noté, le thème choisi est {theme}. Avez-vous une préférence pour le style que vous souhaitez ajouter ?
+  utter_response_style:
+  - text: Ce sont de très bonnes idées, vous pouvez ajouter des détails afin de rendre l’œuvre moins minimaliste. Quels détails souhaitez-vous ajouter?
+  utter_response_details:
+  - text: Très bon choix, vous souhaitez ajouter {details}. Maintenant, il faudrait penser au format de votre image. JPEG ou GIF ?
+actions:
+- action_tts
+forms: {}
+e2e_actions: []
