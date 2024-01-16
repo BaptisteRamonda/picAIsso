@@ -1,0 +1,42 @@
+version: "2.0"
+rules:
+- rule: Hello
+  steps:
+  - intent: salutations
+  - action: utter_hello
+  - action: utter_accessibility
+- rule: Bot Challenge
+  steps:
+  - intent: bot_challenge
+  - action: utter_bot_challenge
+- rule: TTS activated
+  steps:
+  - action: utter_accessibility
+  - intent: affirmation
+  - action: utter_tts_active
+  - action: action_tts
+- rule: Bye
+  steps:
+  - intent: adieux
+  - action: utter_bye
+- rule: TTS Desactivated
+  steps:
+  - action: utter_accessibility
+  - intent: negation
+  - action: utter_tts_desactive
+- rule: Reponse Type
+  steps:
+  - intent: select_type
+  - action: utter_response_type
+- rule: Response Theme
+  steps:
+  - intent: select_theme
+  - action: utter_response_theme
+- rule: Response Style
+  steps:
+  - intent: select_style
+  - action: utter_response_style
+- rule: Response Details
+  steps:
+  - intent: select_details
+  - action: utter_response_details

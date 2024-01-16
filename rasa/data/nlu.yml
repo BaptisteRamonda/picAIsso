@@ -1,0 +1,79 @@
+version: "2.0"
+nlu:
+- intent: remerciements
+  examples: |
+    - Merci
+    - Merci beaucoup
+- intent: bot_challenge
+  examples: |
+    - Est-ce que je parle à un humain ?
+    - Est-ce que je parle à un bot ?
+    - Tu es un humain ?
+    - Tu es un bot ?
+- intent: salutations
+  examples: |
+    - Salut
+    - Yo
+    - Hey
+    - Bonjour
+- intent: adieux
+  examples: |
+    - Au revoir
+    - A plus
+    - Bye bye
+    - Tchao
+    - Ciao
+- intent: accessibilite
+  examples: |
+    - Je suis aveugle, peux tu parler ?
+- intent: affirmation
+  examples: |
+    - D'accord
+    - Pourquoi pas
+    - Allez
+    - Yes
+    - Oui
+    - Okay
+- intent: negation
+  examples: |
+    - Non
+    - Je ne veux pas
+    - Je ne suis pas d'accord
+    - No
+    - Absolument pas
+    - Je ne préfère pas
+    - Négatif
+- intent: select_type
+  examples: |
+    - Je veux faire une [photo](type_art).
+    - J'aimerais faire une [photo](type_art).
+    - Je souhaite faire une [photo](type_art).
+    - Je veux faire un [dessin](type_art).
+    - J'aimerais faire un [dessin](type_art).
+    - Je souhaite faire un [dessin](type_art).
+    - Je veux faire une [peinture](type_art).
+    - J'aimerais faire une [peinture](type_art).
+    - Je souhaite faire une [peinture](type_art).
+- intent: select_theme
+  examples: |
+    - Je souhaite représenter la [nature](theme).
+    - Je souhaite représenter une [ville](theme).
+    - Je souhaite représenter une [personne](theme).
+    - Je souhaite représenter un [animal](theme).
+    - la [nature](theme)
+    - Une [ville](theme)
+    - Une [personne](theme)
+    - Un [animal](theme)
+    - Le thème [nature](theme).
+    - Le thème [ville](theme).
+    - Le thème [personne](theme).
+    - Le thème [animal](theme).
+- intent: select_style
+  examples: |
+    - Oui, j'aime quand il y a beaucoup de [couleurs](style).
+    - J'aimerais que ce soit [réaliste](style).
+- intent: select_details
+  examples: |
+    - Ajoute un dragon dans le [lac](details).
+
+
