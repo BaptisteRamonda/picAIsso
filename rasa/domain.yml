@@ -118,8 +118,18 @@ responses:
   - text: Nous vous remercions de patienter pendant la conception de votre œuvre.
   - text: Pendant que nous façonnons votre création, merci de bien vouloir patienter.
   - text: Merci d'attendre pendant que nous donnons vie à votre œuvre.
+  utter_show_photography:
+  - image: https://i.imgur.com/vZBUv63.jpeg
+    text: Et voilà votre chef d’œuvre ! J'espère que cela vous plaît.
+  utter_show_painting:
+  - image: https://i.imgur.com/5whKNxs.jpeg
+    text: Et voilà votre chef d’œuvre ! J'espère que cela vous plaît.
+  utter_show_drawing:
+  - image: https://i.imgur.com/FyI133g.jpeg
+    text: Et voilà votre chef d’œuvre ! J'espère que cela vous plaît.
 actions:
 - action_tts
 - action_tp
+- action_si
 forms: {}
 e2e_actions: []

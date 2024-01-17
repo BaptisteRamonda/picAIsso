@@ -17,6 +17,12 @@ nlu:
     - Hey
     - Bonjour
     - Hello
+    - Salut mon ptit robot
+    - Sakut
+    - Hey !
+    - Salut !
+    - Hey salut !
+    - Salut bot
 - intent: adieux
   examples: |
     - Au revoir
@@ -24,6 +30,7 @@ nlu:
     - Bye bye
     - Tchao
     - Ciao
+    - Bye
 - intent: accessibilite
   examples: |
     - Je suis aveugle, peux tu parler ?
@@ -38,6 +45,7 @@ nlu:
     - oui
     - D"accord
     - Oui parfait
+    - Oui bien sûr
 - intent: negation
   examples: |
     - Non
@@ -49,6 +57,7 @@ nlu:
     - Négatif
     - Non pas spécialement
     - NON
+    - non
 - intent: select_type
   examples: |
     - Je veux faire une [photo](type_art).
@@ -69,6 +78,15 @@ nlu:
     - Un [dessin](type_art)
     - Plutôt une [photographie](type_art)
     - Une [photo](type_art)
+    - La [photographie](type_art)
+    - une [photo](type_art)
+    - Une [photo](type_art) s'il te plaît
+    - J'aimerais faire une [photo](type_art)
+    - Une [photographie](type_art) stp
+    - une [peinture](type_art)
+    - La [peinture](type_art)
+    - Je veux faire une [photographie](type_art)
+    - Je veux faire une [photo](type_art)
 - intent: select_theme
   examples: |
     - Je souhaite représenter la [nature](theme).
@@ -85,9 +103,14 @@ nlu:
     - Le thème [animal](theme).
     - La [nature](theme)
     - Je veux peindre la [naturre](theme)
+    - Le theme de la [nature](theme)
+    - J'aimerais representer une [ville](theme)
+    - une [ville](theme)
+    - Le thème [ville](theme)
+    - J'aimerais représenter une [ville](theme)
+    - Le thème de la [ville](theme)
 - intent: select_style
   examples: |
-    - J'aimerais que ce soit [realiste](style)
     - J'aimerais que ce soit [realiste](style)
     - Plutôt [realiste](style)
     - Un style plutôt [realiste](style)
@@ -97,6 +120,24 @@ nlu:
     - Un peu comme [Picasso](style)
     - Comme si c'était [Renoir](style)
     - En imitant [Miro](style)
+    - En imitant [Picasso](style)
+    - J'aimerais que ce soir [realiste](style)
+    - J'aimerais que ce soit [réaliste](style)
+    - Plutôt [réaliste](style)
+    - J'aimerais que ce soir [réaliste](style)
+    - Un style plutôt [réaliste](style)
+    - A la maniere de [Picasso](style)
+    - Un style coloré
+    - un style [abstrait](style)
+    - Un style colore
+    - Oui, coloré
+    - Dans le style de [Picasso](style)
+    - Le style de [Picasso](style)
+    - Un style plutôt coloré
+    - Un style à la [Picasso](style)
+    - Dans un style [réaliste](style)
+    - Un style très [réaliste](style)
+    - Un style comme [Picasso](style)
 - intent: select_details
   examples: |
     - Ajoute un objet dans l'emplacement
@@ -114,3 +155,21 @@ nlu:
     - Ajoute un éléphant au milieu et mets un arbre dans le ciel
     - Ajoute un bateau dans la rue et mets un chien sur le trottoir
     - ajoute un avion dans le ciel et un chien dans l'herbe
+    - Place un avion dans le ciel et ajoute un chien dans la riviere
+    - Mets un avion dans le ciel et une voiture dans la rue
+    - Ajoute un avion dans le ciel et mets un chien au milieu de la rue
+    - Ajoute un avion dans le ciel et mets un chien dans la rue
+    - Ajoute un avion dans le ciel
+    - Ajoute un avion dans le ciel et un chien au milieu de la rue
+    - Ajoute un avion dans le ciel et mets un chien au milieu de l'image
+    - Ajoute un avion dans le ciel et rajoute un chien au milieu de l'image
+    - Rajoute une fleur dans le centre
+    - Ajoute un avion
+    - Mets une fleur au centre de l'image
+    - Mets une fleur au centre de la [peinture](type_art)
+    - Ajoute un chien dans la rue
+    - Ajoute un avion dans le ciel et mets un chien au centre de l'image
+    - Ajoute un collier autour du cou
+    - Ajoute un collier autour de son cou
+    - Mets un collier autour du cou
+    - Ajoute une fleur au centre le la [peinture](type_art)

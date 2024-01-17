@@ -85,11 +85,11 @@ class ActionTextProcessing(Action):
 
         # Créer un dictionnaire JSON des mots-clés
         prompt_json = {
-            "Type": Translator(from_lang="fr", to_lang="en").translate(type_text),
-            "Theme": Translator(from_lang="fr", to_lang="en").translate(theme_text),
-            "Style": Translator(from_lang="fr", to_lang="en").translate(style_text),
-            "Details": lemmes
-        }
+                "Type": type_text,
+                "Theme": theme_text,
+                "Style": style_text,
+                "Details": lemmes
+            }
 
         json_str = json.dumps(prompt_json, ensure_ascii=False)
 
@@ -98,11 +98,15 @@ class ActionTextProcessing(Action):
         fichier_json = "prompt.json"
         chemin_complet = os.path.join(dossier, fichier_json)
 
-        # Créez le dossier s'il n'existe pas déjà
+        # Supprimer le fichier JSON s'il existe déjà
+        if os.path.exists(chemin_complet):
+            os.remove(chemin_complet)
+
+        # Créer le dossier s'il n'existe pas déjà
         if not os.path.exists(dossier):
             os.makedirs(dossier)
 
-        # Enregistrez le fichier JSON
+        # Enregistrer le fichier JSON
         with open(chemin_complet, 'w') as fichier:
             json.dump(json_str, fichier, indent=2)
 
@@ -110,3 +114,30 @@ class ActionTextProcessing(Action):
 
         return []   
     
+class ActionShowImage(Action):
+
+    def name(self) -> Text:
+        return "action_si"
+    
+    def run(self, dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        # Obtenez la valeur du slot "type_art"
+        type_art = tracker.get_slot("type_art")
+
+        # Vérifiez si le slot "type_art" est égal à "peinture"
+        if type_art and type_art.lower() == "peinture":
+            # Appellez l'action "utter_show_painting"
+            dispatcher.utter_message(template="utter_show_painting")
+        elif type_art and type_art.lower() == "dessin":
+            # Appellez l'action "utter_show_painting"
+            dispatcher.utter_message(template="utter_show_drawing")
+        elif type_art and type_art.lower() == "photo":
+            # Appellez l'action "utter_show_painting"
+            dispatcher.utter_message(template="utter_show_photography")
+        else:
+            # Si la condition n'est pas remplie, vous pouvez ajouter une réponse alternative
+            dispatcher.utter_message(text="Il semblerait qu'il y ait eu une erreur dans le processus... Et si nous recommencions notre conversation ?")
+
+        return [] 
