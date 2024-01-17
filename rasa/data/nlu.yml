@@ -16,6 +16,7 @@ nlu:
     - Yo
     - Hey
     - Bonjour
+    - Hello
 - intent: adieux
   examples: |
     - Au revoir
@@ -34,6 +35,9 @@ nlu:
     - Yes
     - Oui
     - Okay
+    - oui
+    - D"accord
+    - Oui parfait
 - intent: negation
   examples: |
     - Non
@@ -43,6 +47,8 @@ nlu:
     - Absolument pas
     - Je ne préfère pas
     - Négatif
+    - Non pas spécialement
+    - NON
 - intent: select_type
   examples: |
     - Je veux faire une [photo](type_art).
@@ -54,6 +60,15 @@ nlu:
     - Je veux faire une [peinture](type_art).
     - J'aimerais faire une [peinture](type_art).
     - Je souhaite faire une [peinture](type_art).
+    - Je veux faire un [dessin](type_art)
+    - Je veux [peindre](type_art)
+    - Je veux [dessiner](type_art)
+    - Je veux faire une [peinture](type_art)
+    - Une [peinture](type_art)
+    - Une [photographie](type_art)
+    - Un [dessin](type_art)
+    - Plutôt une [photographie](type_art)
+    - Une [photo](type_art)
 - intent: select_theme
   examples: |
     - Je souhaite représenter la [nature](theme).
@@ -68,12 +83,34 @@ nlu:
     - Le thème [ville](theme).
     - Le thème [personne](theme).
     - Le thème [animal](theme).
+    - La [nature](theme)
+    - Je veux peindre la [naturre](theme)
 - intent: select_style
   examples: |
-    - Oui, j'aime quand il y a beaucoup de [couleurs](style).
-    - J'aimerais que ce soit [réaliste](style).
+    - J'aimerais que ce soit [realiste](style)
+    - J'aimerais que ce soit [realiste](style)
+    - Plutôt [realiste](style)
+    - Un style plutôt [realiste](style)
+    - Dans un style [abstrait](style)
+    - Style [abstrait](style)
+    - A la manière de [Van Gogh](style)
+    - Un peu comme [Picasso](style)
+    - Comme si c'était [Renoir](style)
+    - En imitant [Miro](style)
 - intent: select_details
   examples: |
-    - Ajoute un dragon dans le [lac](details).
-
-
+    - Ajoute un objet dans l'emplacement
+    - Mets un objet au emplacement
+    - Rajoute un objet vers emplacement
+    - Ajoute une objet au emplacement
+    - Mets une objet vers emplacement
+    - Rajoute une objet dans emplacement
+    - Ajoute un arbre au milieu
+    - Un objet dans emplacement
+    - Rajoute un arbre dans le ciel
+    - Ajoute une fleur au milieu
+    - Rajoute un avion dans le ciel
+    - Ajoute un chien au milieu et rajoute un avion dans le ciel
+    - Ajoute un éléphant au milieu et mets un arbre dans le ciel
+    - Ajoute un bateau dans la rue et mets un chien sur le trottoir
+    - ajoute un avion dans le ciel et un chien dans l'herbe

@@ -1,1 +1,231 @@
 version: "2.0"
+stories:
+- story: TTS Active
+  steps:
+  - intent: salutations
+  - action: utter_hello
+  - action: action_tts
+  - action: utter_accessibility
+  - action: action_tts
+  - intent: affirmation
+  - action: utter_tts_active
+  - action: action_tts
+  - action: utter_ask_type
+  - action: action_tts
+  - intent: select_type
+  - action: utter_ask_theme
+  - action: action_tts
+  - intent: select_theme
+  - action: utter_ask_style
+  - action: action_tts
+  - intent: select_style
+  - action: utter_ask_details
+  - action: action_tts
+  - intent: select_details
+  - action: action_tp
+  - action: action_tts
+  - action: utter_ask_confirmation
+  - action: action_tts
+  - intent: affirmation
+  - action: utter_tell_waiting
+  - action: action_tts
+- story: TTS Desactive
+  steps:
+  - intent: salutations
+  - action: utter_hello
+  - action: action_tts
+  - action: utter_accessibility
+  - action: action_tts
+  - intent: negation
+  - action: utter_tts_desactive
+  - action: utter_ask_type
+  - intent: select_type
+  - action: utter_ask_theme
+  - intent: select_theme
+  - action: utter_ask_style
+  - intent: select_style
+  - action: utter_ask_details
+  - intent: select_details
+  - action: action_tp
+  - action: utter_ask_confirmation
+  - intent: affirmation
+  - action: utter_tell_waiting
+- story: Story from Conversation ID d7369b579df64635b406570244c19f4c
+  steps:
+  - intent: salutations
+  - action: utter_hello
+  - action: action_tts
+  - action: utter_accessibility
+  - action: action_tts
+  - intent: negation
+  - action: utter_tts_desactive
+  - action: utter_ask_type
+  - intent: select_type
+    entities:
+    - type_art: dessin
+  - slot_was_set:
+    - type_art: dessin
+  - action: utter_ask_theme
+  - intent: select_theme
+    entities:
+    - theme: ville
+  - slot_was_set:
+    - theme: ville
+  - action: utter_ask_style
+  - intent: select_style
+    entities:
+    - style: réaliste
+  - slot_was_set:
+    - style: réaliste
+  - action: utter_ask_details
+  - intent: select_details
+  - action: action_tp
+  - action: utter_ask_confirmation
+  - intent: affirmation
+  - action: utter_tell_waiting
+- story: Story from Conversation ID 445d265bae7c48c9ac093d8701a2175d
+  steps:
+  - intent: salutations
+  - action: utter_hello
+  - action: action_tts
+  - action: utter_accessibility
+  - action: action_tts
+  - intent: negation
+  - action: utter_tts_desactive
+  - action: utter_ask_type
+  - intent: select_type
+    entities:
+    - type_art: peinture
+  - slot_was_set:
+    - type_art: peinture
+  - action: utter_ask_theme
+  - intent: select_theme
+    entities:
+    - theme: ville
+  - slot_was_set:
+    - theme: ville
+  - action: utter_ask_style
+  - intent: select_style
+    entities:
+    - style: réaliste
+  - slot_was_set:
+    - style: réaliste
+  - action: utter_ask_details
+  - intent: select_details
+  - action: action_tp
+  - action: utter_ask_confirmation
+  - intent: affirmation
+  - action: utter_tell_waiting
+- story: Story from Conversation ID 6680d39106c34284920172cae69ee841
+  steps:
+  - intent: salutations
+  - action: utter_hello
+  - action: action_tts
+  - action: utter_accessibility
+  - action: action_tts
+  - intent: negation
+  - action: utter_tts_desactive
+  - action: utter_ask_type
+  - intent: select_type
+    entities:
+    - type_art: photo
+  - slot_was_set:
+    - type_art: photo
+  - action: utter_ask_theme
+  - intent: select_theme
+    entities:
+    - theme: nature
+  - slot_was_set:
+    - theme: nature
+  - action: utter_ask_style
+  - intent: select_style
+    entities:
+    - style: réaliste
+  - slot_was_set:
+    - style: réaliste
+  - action: utter_ask_details
+  - intent: select_details
+  - action: action_tp
+  - action: utter_ask_confirmation
+  - intent: affirmation
+  - action: utter_tell_waiting
+- story: Story from Conversation ID 6680d39144c34284920172cae69ee841
+  steps:
+  - intent: salutations
+  - action: utter_hello
+  - action: action_tts
+  - action: utter_accessibility
+  - action: action_tts
+  - intent: affirmation
+  - action: utter_tts_active
+  - action: action_tts
+  - action: utter_ask_type
+  - action: action_tts
+  - intent: select_type
+    entities:
+    - type_art: photo
+  - slot_was_set:
+    - type_art: photo
+  - action: utter_ask_theme
+  - action: action_tts
+  - intent: select_theme
+    entities:
+    - theme: nature
+  - slot_was_set:
+    - theme: nature
+  - action: utter_ask_style
+  - action: action_tts
+  - intent: select_style
+    entities:
+    - style: réaliste
+  - slot_was_set:
+    - style: réaliste
+  - action: utter_ask_details
+  - action: action_tts
+  - intent: select_details
+  - action: action_tp
+  - action: utter_ask_confirmation
+  - action: action_tts
+  - intent: affirmation
+  - action: utter_tell_waiting
+  - action: action_tts
+- story: Story from Conversation ID 391cd9d53bf547bab05626f42fdac6d4
+  steps:
+  - intent: salutations
+  - action: utter_hello
+  - action: action_tts
+  - action: utter_accessibility
+  - action: action_tts
+  - intent: affirmation
+  - action: utter_tts_active
+  - action: action_tts
+  - action: utter_ask_type
+  - action: action_tts
+  - intent: select_type
+    entities:
+    - type_art: peinture
+  - slot_was_set:
+    - type_art: peinture
+  - action: utter_ask_theme
+  - action: action_tts
+  - intent: select_theme
+    entities:
+    - theme: ville
+  - slot_was_set:
+    - theme: ville
+  - action: utter_ask_style
+  - action: action_tts
+  - intent: select_style
+    entities:
+    - style: realiste
+  - slot_was_set:
+    - style: realiste
+  - action: utter_ask_details
+  - action: action_tts
+  - intent: select_details
+  - action: action_tp
+  - action: utter_ask_confirmation
+  - action: action_tts
+  - intent: affirmation
+  - action: utter_tell_waiting
+  - action: action_tts
