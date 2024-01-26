@@ -390,3 +390,49 @@ stories:
   - action: action_si
   - action: utter_congrats
   - action: utter_bye
+- story: Story from Conversation ID 766e4ea412224b37aa0356e6b30ce65d
+  steps:
+  - intent: salutations
+  - action: utter_hello
+  - action: action_tts
+  - action: utter_accessibility
+  - action: action_tts
+  - intent: affirmation
+  - action: utter_tts_active
+  - action: action_tts
+  - action: utter_ask_type
+  - action: action_tts
+  - intent: select_type
+    entities:
+    - type_art: dessin
+  - slot_was_set:
+    - type_art: dessin
+  - action: utter_ask_theme
+  - action: action_tts
+  - intent: select_theme
+    entities:
+    - theme: animal
+  - slot_was_set:
+    - theme: animal
+  - action: utter_ask_style
+  - action: action_tts
+  - intent: select_style
+    entities:
+    - style: réaliste
+  - slot_was_set:
+    - style: réaliste
+  - action: utter_ask_details
+  - action: action_tts
+  - intent: select_details
+  - action: action_tp
+  - action: utter_ask_confirmation
+  - action: action_tts
+  - intent: affirmation
+  - action: utter_tell_waiting
+  - action: action_tts
+  - action: action_si
+  - action: action_tts
+  - action: utter_congrats
+  - action: action_tts
+  - action: utter_bye
+  - action: action_tts
